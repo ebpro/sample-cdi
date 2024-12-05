@@ -1,0 +1,23 @@
+# This is an .editorconfig file used to maintain consistent coding styles between different editors and IDEs.
+# For more information, visit editorconfig.org.
+
+# Set the root to true to indicate that this is the top-most .editorconfig file.
+# Apply the following settings to all files:
+# - Use spaces for indentation.
+# - Set the indentation size to 2 spaces.
+# - Set the tab width to 2 spaces.
+# - Use LF (line feed) for end-of-line characters.
+# - Use UTF-8 character encoding.
+# - Trim trailing whitespace in lines.
+# - Ensure files end with a newline.
+# editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true

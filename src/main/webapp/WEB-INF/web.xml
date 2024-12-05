@@ -1,0 +1,21 @@
+<!--
+
+This XML configuration file defines the deployment descriptor for a Jakarta EE web application.
+- The root element <web-app> specifies the version of the web application and the namespaces used.
+- The 'version' attribute indicates the version of the web application schema being used (6.0 in this case).
+- The 'xmlns' attribute defines the default namespace for Jakarta EE.
+- The 'xmlns:xsi' attribute defines the XML Schema instance namespace.
+- The 'xsi:schemaLocation' attribute provides the location of the XML Schema for validation.
+
+Within the <web-app> element:
+- The <welcome-file-list> element contains a list of welcome files.
+- The <welcome-file> element specifies 'index.html' as the default welcome file for the application.
+-->
+<web-app version="6.0"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

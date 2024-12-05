@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+
+  This is a Logback configuration file used to set up logging for the application.
+
+  - The file starts with the XML declaration and DOCTYPE for Logback configuration.
+  - It imports necessary classes for encoding and appending log messages.
+  - Defines an appender named "STDOUT" that outputs log messages to the console.
+    - Uses a PatternLayoutEncoder to format log messages with a specific pattern:
+      %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n
+      - %d{HH:mm:ss.SSS}: Timestamp in hours, minutes, seconds, and milliseconds.
+      - [%thread]: Thread name.
+      - %-5level: Log level with a minimum width of 5 characters.
+      - %logger{36}: Logger name truncated to 36 characters.
+      - %kvp: Key-value pairs (if any).
+      - %msg: Log message.
+      - %n: Newline character.
+  - Sets the root logger level to "info" and attaches the "STDOUT" appender to it.
+-->
+<!DOCTYPE configuration>
+
+<configuration>
+  <import class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"/>
+  <import class="ch.qos.logback.core.ConsoleAppender"/>
+
+  <appender name="STDOUT" class="ConsoleAppender">
+    <encoder class="PatternLayoutEncoder">
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="info">
+    <appender-ref ref="STDOUT"/>
+  </root>
+</configuration>

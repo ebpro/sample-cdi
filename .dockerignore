@@ -1,0 +1,5 @@
+# This .dockerignore file specifies files and directories that should be ignored by Docker when building an image.
+# The 'target' directory is typically used for build output and should not be included in the Docker image.
+# The '.github' directory contains GitHub-specific files and workflows that are not needed in the Docker image.
+target
+.github
