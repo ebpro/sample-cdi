@@ -11,9 +11,8 @@
   <packaging>war</packaging>
 
   <name>sample-cdi</name>
-  <description>A simple sample-cdi.</description>
-  <!-- FIXME change it to the project's website -->
-  <url>https://www.example.com</url>
+  <description>A simple sample CDI Java application</description>
+  <url> https://github.com/ebpro/sample-cdi</url>
 
   <properties>
 
@@ -21,6 +20,9 @@
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>21</maven.compiler.release>
+    <maven.compiler.target>${maven.compiler.release}</maven.compiler.target>
+    <maven.compiler.source>${maven.compiler.release}</maven.compiler.source>
+
 
     <maven-clean-plugin.version>3.4.0</maven-clean-plugin.version>
     <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
@@ -118,8 +120,8 @@
     <!-- HERE JUST TO TEST WITH JAVA SE -->
     <dependency>
       <groupId>org.jboss.weld.se</groupId>
-      <artifactId>weld-se-core</artifactId>
-      <version>6.0.0.CR2</version>
+      <artifactId>weld-se-shaded</artifactId>
+      <version>5.0.1.Final</version>
     </dependency>
 
   </dependencies>

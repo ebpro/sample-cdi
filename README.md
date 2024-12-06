@@ -8,15 +8,15 @@ This project is a sample application demonstrating the use of Contexts and Depen
 
 For Jakarta EE in a real app, you need to remove the following dependency from the `pom.xml` file:
 
-    ```xml
-    <dependency>
-      <groupId>org.jboss.weld.se</groupId>
-      <artifactId>weld-se-core</artifactId>
-    </dependency>
-    ```
+```xml
+<dependency>
+  <groupId>org.jboss.weld.se</groupId>
+  <artifactId>weld-se-core</artifactId>
+</dependency>
+```
 
 It is only needed for Java SE.
-  
+
 ## Objective
 
 The objective of this project is to demonstrate how to use CDI in Java applications. It includes examples of how to use qualifiers, producers, interceptors, and decorators. The project can be used as a JakartaEE application or as a standalone application.
@@ -93,6 +93,7 @@ The `Dockerfile` is provided to build the application in a first stage and add i
 ```sh
 docker build --tag brunoe/sample-cdi .
 docker run -p 8080:8080 brunoe/sample-cdi
+```
 
 ```sh
 curl -X POST http://localhost:8080/sample-cdi-0.1.0-SNAPSHOT/api/v1/payment

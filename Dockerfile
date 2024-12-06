@@ -1,5 +1,5 @@
 # This Dockerfile builds and runs a Java application using Payara Micro and Eclipse Temurin JDK 21.
-# 
+#
 # ARG PAYARA_VERSION=6.2024.11-jdk21
 # - Defines the version of Payara Micro to be used.
 #
@@ -31,6 +31,4 @@ COPY . /app
 RUN --mount=type=cache,target=/root/.m2 ./mvnw -Dskiptest package
 
 FROM payara/micro:${PAYARA_VERSION}
-COPY --from=build /app/target/*war ${DEPLOY_DIR}/
-ENTRYPOINT java -jar ${PAYARA_DIR}/payara-micro.jar \
-                            --deploy ${DEPLOY_DIR}/*.war
+COPY --from=build /app/target/*war ${DEPLOY_DIR}

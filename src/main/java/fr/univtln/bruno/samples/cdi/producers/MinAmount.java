@@ -11,7 +11,7 @@ import jakarta.inject.Qualifier;
  * This annotation is a CDI (Contexts and Dependency Injection) qualifier.
  * It is used to mark a field, type, or method for injection with a specific
  * implementation or instance that is qualified by this annotation.
- * 
+ *
  * The @Qualifier annotation indicates that this is a custom qualifier.
  * The @Retention(RUNTIME) annotation specifies that this annotation will be
  * available at runtime.
@@ -20,5 +20,5 @@ import jakarta.inject.Qualifier;
  */
 @Qualifier
 @Retention(RUNTIME)
-@Target({FIELD, TYPE, METHOD})
+@Target({PARAMETER, FIELD, TYPE, METHOD})
 public @interface MinAmount {}
